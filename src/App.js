@@ -6,8 +6,8 @@ import { Contact } from './Pages/Contact';
 
 function App() {
   return (
-    <div>
-     
+    <div className="App">
+
     </div>
   );
 }
