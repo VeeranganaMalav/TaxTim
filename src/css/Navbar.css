@@ -1,0 +1,20 @@
+.top-nav {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #444444;
+}
+.reg-nav{
+    color: white;
+}
+.link-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+  color: white;
+}
+.link{
+    color: white;
+}
