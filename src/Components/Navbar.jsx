@@ -7,26 +7,54 @@ export const Navbar = () => {
     <>
       <div className="top-nav">
         <div className="reg-nav">
-         
           <div>
             <p>Registered for SARS eFiling? Click here to get started.</p>
           </div>
         </div>
         <div className="link-div">
-          <div >
-            <Link className="link" to="/">Home</Link>
+          <div>
+            <Link className="link" to="/">
+              Home
+            </Link>
           </div>
           <div>
-            <Link className="link" to="/contact">Contact</Link>
+            <Link className="link" to="/contact">
+              Contact
+            </Link>
           </div>
           <div>
-            <Link className="link" to="/faq">FAQ</Link>
+            <Link className="link" to="/faq">
+              FAQ
+            </Link>
           </div>
           <div>
-            <Link className="link" to="/calculator">Calculators</Link>
+            <Link className="link" to="/calculator">
+              Calculators
+            </Link>
           </div>
           <div>
-            <Link className="link" to="/login">Login</Link>
+            <Link className="link" to="/login">
+              Login
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="top-nav-II">
+        <div className="logo-img">
+          <img src="https://www.taxtim.com/za/images/taxtim-logo.svg" alt="" />
+        </div>
+        <div className="top-nav-III">
+          <div>
+            <a className="anch">How it works</a>
+          </div>
+          <div>
+            <a className="anch">Pricing</a>
+          </div>
+          <div>
+            <a className="anch">Help</a>
+          </div>
+          <div>
+            <button className="getstart">GET STARTED</button>
           </div>
         </div>
       </div>
