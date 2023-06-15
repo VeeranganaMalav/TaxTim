@@ -1,0 +1,8 @@
+.main {
+  background: #444444;
+  color: white;
+  text-align: center;
+  padding: 20px 0 20px 0;
+  z-index: 2;
+  margin-top: 2em;
+}
