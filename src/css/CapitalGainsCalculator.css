@@ -1,0 +1,155 @@
+.calculator-heading{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sub-calc{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+#short-term-gains-form, #long-term-gains-form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    padding: 30px 30px;
+    background-color: rgb(239, 239, 239);
+}
+
+.calc-subheading{
+    font-family: 'Montserrat', sans-serif;
+    margin: 70px 0px 30px 0px;
+}
+
+.calculator-label > .calculator-fields{
+    font-size: 20px;
+    width: 40%;
+}
+
+.calculator-label{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+
+.calculate-btn{
+    width: 30%;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #444444;
+    border: none;
+    color: white;
+}
+
+.calculations{
+    margin: auto;
+    margin-top: 60px;
+    width: 40%;
+}
+
+.calculations > h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: left;
+    font-size: 20px;
+}
+
+.calculated-tax{
+    color: #444444;
+    font-size: 35px;
+    margin-left: 20px;
+}
+
+
+/* ------------------------ MEDIA QUERIES ------------------------- */
+
+/* ------------------------- TABLET VIEW -------------------------- */
+@media only screen and (min-width: 376px) and (max-width: 820px) {
+    .calculator-heading{
+        font-size: 30px;
+    }
+
+    .sub-calc{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+    
+    #short-term-gains-form, #long-term-gains-form{
+        width: 80%;
+        padding: 30px 30px;
+    }
+    
+    .calculator-label > .calculator-fields{
+        font-size: 20px;
+        width: 45%;
+    }
+    
+    .calculator-label{
+        margin: 5px 0px;
+        font-size: 22px;
+    }
+    
+    .calculate-btn{
+        width: 40%;
+        font-size: 22px;
+    }
+    
+    .calculations{
+        width: 70%;
+    }
+    
+    .calculations > h4{
+        font-size: 23px;
+    }
+}
+
+
+
+/* ------------------------- MOBILE VIEW --------------------------- */
+@media only screen and (max-width: 375px) {
+    .calculator-heading{
+        font-size: 28px;
+    }
+
+    .sub-calc{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    
+    #short-term-gains-form, #long-term-gains-form{
+        width: 70%;
+        padding: 30px 30px;
+    }
+    
+    .calculator-label > .calculator-fields{
+        margin: 5px 0px;
+        width: 70%;
+    }
+    
+    .calculator-label{
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    
+    .calculate-btn{
+        width: 60%;
+    }
+    
+    .calculations{
+        width: 70%;
+    }
+    
+    .calculations > h4{
+        font-size: 23px;
+    }
+}

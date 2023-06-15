@@ -1,4 +1,6 @@
 import "./App.css";
+import CapitalGains from "./Components/CapitalGains";
+import IncomeTaxCalculator from "./Components/IncomeTaxCalculator";
 import { AllRoutes } from "./Components/AllRoutes";
 import { Navbar } from "./Components/Navbar";
 // import { Contact } from './Pages/Contact';
@@ -8,7 +10,9 @@ import { Navbar } from "./Components/Navbar";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar/>
+      {/* <IncomeTaxCalculator /> */}
+      {/* <CapitalGains /> */}
       <AllRoutes />
     </div>
   );
