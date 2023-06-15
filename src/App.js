@@ -1,6 +1,5 @@
 import "./App.css";
 import { AllRoutes } from "./Components/AllRoutes";
-
 import { Navbar } from "./Components/Navbar";
 // import { Contact } from './Pages/Contact';
 // import { FAQ } from './Pages/FAQ';
