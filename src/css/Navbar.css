@@ -3,9 +3,13 @@
   justify-content: space-around;
   text-align: center;
   background-color: #444444;
+  color: white;
+  height: 30px;
+  font-size: 0.85em;
+  align-items: center;
 }
-.reg-nav{
-    color: white;
+.reg-nav {
+  color: white;
 }
 .link-div {
   display: flex;
@@ -14,7 +18,46 @@
   gap: 10px;
   margin-top: 15px;
   color: white;
+  align-items: center;
 }
-.link{
-    color: white;
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+.top-nav-II {
+  display: flex;
+  justify-content: space-around;
+  background-color: #85c4cc;
+  align-items: center;
+  padding: 15px;
+}
+.top-nav-III {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  height: 100%;
+}
+.anch {
+  color: rgb(248, 246, 246);
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Droid Sans", Arial, sans-serif;
+  margin-left: 0.2em;
+  padding: 5px;
+}
+.logo-img {
+  width: 221px;
+  vertical-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.getstart {
+  width: auto;
+  height: 30px;
+  color: white;
+  border: 2px solid #f36853;
+  background-color: #eb4f36;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
