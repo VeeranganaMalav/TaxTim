@@ -1,0 +1,90 @@
+.loginContainer1{
+    background-color: #dcf1f6;
+    
+   
+}
+
+.loginContainer{
+    margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.login{
+    width: 40%;
+}
+.sign{
+    width: 60%;
+    margin-left: 10%;
+}
+.loginform{
+    display: flex;
+    flex-direction: column;
+}
+.inputform{
+    width: 200px;
+    margin: 10px 0px 10px 0;
+}
+.lablefrom{
+    color: #4d4d4d;
+    font-weight: bold;
+}
+.formbtn{
+    width: 200px;
+    margin: 10px 0px 10px 0;
+    background-color: #d4cdcd;
+    color: #4d4d4d;
+    
+}
+.link :nth-child(1){
+   color: green;
+}
+.link{
+    margin: 5px 0px 5px 0;
+}
+.formbtn:hover{
+    background-color :#d5a1a1;
+    transition: 0.4s;
+   
+}
+.text{
+    color: #4d4d4d;
+}
+.para{
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+.para p{
+    margin-top: 30px;
+}
+.image1{
+    width: 100%;
+    margin-top: 300px;
+}
+.image2{
+    height: 500px;
+     margin-left: 200px;
+}
+@media screen and (max-width: 800px){
+
+    .loginContainer{
+    
+      display: flex;
+      flex-direction: column;
+    }
+    .login{
+        width: 100%;
+    }
+    .sign{
+        width: 100%;
+        margin-left: 0;
+    }
+    .image1{
+        width: 30%;
+        margin-top: 0;
+    }
+    .image2{
+        margin-top: -300px;
+        margin-left: 300px;
+        height: 300px;
+    }
+}
