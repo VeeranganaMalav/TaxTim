@@ -16,9 +16,8 @@ function App() {
       <Navbar />
       <AllRoutes />
       <Footer />
-
       {/* <IncomeTaxCalculator /> */}
-      {/* <CapitalGains /> */}
+      <CapitalGains />
     </div>
   );
 }
