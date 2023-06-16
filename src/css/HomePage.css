@@ -1,0 +1,76 @@
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  
+}
+
+.form-container {
+  position: absolute;
+  top: 250px;
+  right: 100px;
+  text-align: left;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  gap: 10px;
+  margin: 10px;
+}
+select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    gap: 10px;
+    margin: 10px;
+}
+.form-container button {
+  padding: 5px 1px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2AA12E;
+  color: #fff;
+  cursor: pointer;
+  width:310px;
+  margin-left: 20px;
+  height: 45px;
+}
+
+.form-container button:hover {
+  background-color: #0069d9;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+p{
+    text-align: left;
+    font-weight: 200;
+}
+h3{
+    font-family:'Montserrat', sans-serif; 
+}
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Roboto', sans-serif; */
+
+h2{
+    font-family:'Montserrat', sans-serif; 
+}

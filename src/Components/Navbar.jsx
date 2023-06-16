@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 export const Navbar = () => {
   return (
+    
     <>
       <div className="top-nav">
         <div className="reg-nav">
