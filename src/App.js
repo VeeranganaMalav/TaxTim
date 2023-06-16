@@ -8,15 +8,17 @@ import { FAQ } from "./Pages/FAQ";
 // import { Contact } from './Pages/Contact';
 // import { FAQ } from './Pages/FAQ';
 // import { Login } from './Pages/Login';
+import { Footer } from "./Components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar />
+      <AllRoutes />
+      <Footer />
+
       {/* <IncomeTaxCalculator /> */}
       {/* <CapitalGains /> */}
-      <AllRoutes />
-   
     </div>
   );
 }
