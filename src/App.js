@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       <Navbar/>
       {/* <IncomeTaxCalculator /> */}
-      {/* <CapitalGains /> */}
-      <AllRoutes />
+      <CapitalGains />
+      {/* <AllRoutes /> */}
     </div>
   );
 }
