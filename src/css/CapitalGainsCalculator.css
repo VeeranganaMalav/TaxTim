@@ -1,5 +1,6 @@
 .calculator-heading{
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 .sub-calc{
@@ -20,6 +21,7 @@
 .calc-subheading{
     font-family: 'Montserrat', sans-serif;
     margin: 70px 0px 30px 0px;
+    text-align: center;
 }
 
 .calculator-label > .calculator-fields{

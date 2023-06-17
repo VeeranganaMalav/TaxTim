@@ -4,13 +4,13 @@ import image from "../images/c.png"
 import image1 from "../images/c2.png";
 import "../css/Login.css";
 import axios from "axios";
-import {useToast} from "@chakra-ui/react"
+import { useToast } from '@chakra-ui/react'
 
 
 export const Login = () => {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("")
-  const [password, setPassword] = useState(""); 
+  const [password, setPassword] = useState("");
   const [email1, setEmail1] = useState("")
   const [password1, setPassword1] = useState("");
   const [name, setName] = useState("");
@@ -23,36 +23,31 @@ export const Login = () => {
     const newObj = {
       name, email, password
     }
-    for(let i=0;i<data.length;i++){
-      if(data[i].email === email){
-        return alert("Email Already Exist")
-      }
-    }
+
     axios.post(`https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/login`, newObj)
-      .then((res) =>{
+      .then(() => {
         toast({
-          title: 'Account created.',
+          title: 'Register Successfully',
           description: "We've created your account for you.",
           status: 'success',
           duration: 9000,
-          isClosable: true,})
-      //  handleToastsuccess()
+          isClosable: true,
+        })
         setEmail("")
         setName("")
         setPassword("")
-  })
-      .catch((err) => {
-       console.log(err)
+      })
+      .catch(() => {
+        toast({
+          title: 'Error!',
+          description: "Some thing went wrong",
+          status: 'error',
+          duration: 9000,
+          isClosable: true,
+        })
       })
   }
-  // const handleToastsuccess = () =>{
-  //   toast({
-  //     title: 'Account created.',
-  //     description: "We've created your account for you.",
-  //     status: 'success',
-  //     duration: 9000,
-  //     isClosable: true,})
-  // }
+
 
   useEffect(() => {
     axios.get(`https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/login`)
@@ -92,6 +87,7 @@ export const Login = () => {
           <h1 className='texth1'>I am a returning user.</h1>
           <h2 className='texth2'>Please enter your login details from before.</h2>
           {isAuth? <h1 className='text'>You are logged in</h1> : ""}
+
           <form className='loginform' onSubmit={handleLogin}>
             <label className='lablefrom'>Email address:
               {" "}
@@ -111,6 +107,7 @@ export const Login = () => {
               <Link>Forgot your password?</Link>
             </div>
           {isAuth? <button className='formbtn' onClick={handleLogout}>Logout</button>:<button className='formbtn' type='submit'>LOGIN TO MY ACCOUNT</button>}
+
           </form>
           <button onClick={() => setShow(!show)} className='formbtn'>I AM NEW HERE</button>
         </div>
@@ -122,8 +119,10 @@ export const Login = () => {
         {/* **************************** sign-up  ****************** */}
         {show ?
           <div className='sign'>
+
             <h1  className='texth1'>I am new here.</h1>
             <h2 className='texth2'>Enter your details below to start your Tax Return.</h2>
+
             <form className='loginform' onSubmit={handleSubmit}>
               <label className='lablefrom'>First name:
                 {" "}

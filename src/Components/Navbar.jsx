@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 export const Navbar = () => {
   return (
+    
     <>
       <div className="top-nav">
         <div className="reg-nav">
@@ -28,7 +29,7 @@ export const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Link className="link" to="/calculator">
+            <Link className="link" to="/calculators">
               Calculators
             </Link>
           </div>

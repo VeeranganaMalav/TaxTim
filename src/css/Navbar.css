@@ -1,45 +1,56 @@
 .top-nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
-  background-color: #444444;
-  color: white;
-  height: 30px;
+  background-color: #D7ECF1;
+  color: rgb(0, 0, 0);
+  height: 50px;
   font-size: 0.85em;
   align-items: center;
+  position: sticky;
+  top:0;
+  z-index: 1;
+
 }
 .reg-nav {
-  color: white;
+  color: rgb(7, 7, 7);
+  width: 50%;
+  justify-content:space-around;
+  margin-right: 250px;
 }
 .link-div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 15px;
-  color: white;
+  justify-content: space-around;
+  gap: 1px;
+  /* margin-top: 15px; */
+  color: rgb(0, 0, 0);
   align-items: center;
+  width: 40%;
+  font-weight: 600;
 }
 .link {
-  color: white;
+  color: rgb(2, 0, 0);
   text-decoration: none;
   font-size: 1em;
 }
 .top-nav-II {
   display: flex;
   justify-content: space-around;
-  background-color: #85c4cc;
+  background-color: #DCF1F6;
   align-items: center;
   padding: 15px;
+  
 }
 .top-nav-III {
   display: flex;
   justify-content: space-around;
-  gap: 5px;
+  gap: 15px;
   height: 100%;
+margin-left: 200px;
 }
 .anch {
-  color: rgb(248, 246, 246);
+  color: rgb(2, 0, 0);
   text-decoration: none;
   font-size: 18px;
   font-family: "Droid Sans", Arial, sans-serif;
@@ -52,12 +63,28 @@
   margin-top: 10px;
   margin-bottom: 20px;
   align-items: center;
+  margin-right: 300px;
 }
 .getstart {
   width: auto;
   height: 30px;
   color: white;
-  border: 2px solid #f36853;
-  background-color: #eb4f36;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 2px solid #2AA12E;
+  background-color: #2AA12E;
+  border-radius: 5px;
 }
+
+
+
+@media (min-width: 376px) and (max-width: 820px) {
+  
+  
+}
+
+
+@media (max-width: 375px) {
+  
+  
+}
+
+
