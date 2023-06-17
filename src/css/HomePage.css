@@ -5,9 +5,9 @@
 
 .text-overlay {
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 25%;
-  right: 0%;
+  right: 45%;
   transform: translate(-50%, -50%);
   font-size: 24px;
   color: rgb(0, 0, 0);
@@ -17,7 +17,7 @@
 
 .form-container {
   position: absolute;
-  top: 250px;
+  top: 200px;
   right: 100px;
   text-align: left;
   gap: 10px;

@@ -17,7 +17,7 @@ function App() {
       <AllRoutes />
       <Footer />
       {/* <IncomeTaxCalculator /> */}
-      <CapitalGains />
+      {/* <CapitalGains /> */}
     </div>
   );
 }

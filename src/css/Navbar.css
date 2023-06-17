@@ -7,6 +7,9 @@
   height: 50px;
   font-size: 0.85em;
   align-items: center;
+  position: sticky;
+  top:0;
+  z-index: 1;
 
 }
 .reg-nav {
@@ -66,8 +69,8 @@ margin-left: 200px;
   width: auto;
   height: 30px;
   color: white;
-  border: 2px solid #25e925;
-  background-color: #45ea2f;
+  border: 2px solid #2AA12E;
+  background-color: #2AA12E;
   border-radius: 5px;
 }
 
