@@ -23,6 +23,7 @@ export const Login = () => {
     const newObj = {
       name, email, password
     }
+
     axios.post(`https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/login`, newObj)
       .then(() => {
         toast({
@@ -47,6 +48,7 @@ export const Login = () => {
       })
   }
 
+
   useEffect(() => {
     axios.get(`https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/login`)
       .then((res) => {
@@ -55,13 +57,22 @@ export const Login = () => {
       .catch((err) => console.log(err.message)) 
   }, [])
 
+
+  const handleLogout = () =>{
+    setIsAuth(false);
+  }
+
+  useEffect(()=>{
+    handleLogout();
+  },[])
+
   const handleLogin = (e) => {
     e.preventDefault();
-    // const newobj1 = {
-    //  email: email1, password:password1
-    // }
     for(let i=0;i<data.length;i++){
       if(data[i].email === email1 && data[i].password === password1){
+        // handleToastsuccess();
+        setEmail1('');
+        setPassword1('')
           return setIsAuth(true)
       }
     }
@@ -73,8 +84,10 @@ export const Login = () => {
     <div className='loginContainer1'>
       <div className='loginContainer'>
         <div className='login'>
-          <h1>I am a returning user.</h1>
-          <h2>Please enter your login details from before.</h2>
+          <h1 className='texth1'>I am a returning user.</h1>
+          <h2 className='texth2'>Please enter your login details from before.</h2>
+          {isAuth? <h1 className='text'>You are logged in</h1> : ""}
+
           <form className='loginform' onSubmit={handleLogin}>
             <label className='lablefrom'>Email address:
               {" "}
@@ -93,7 +106,8 @@ export const Login = () => {
             <div className='link'>
               <Link>Forgot your password?</Link>
             </div>
-            <button className='formbtn' type='submit'>LOGIN TO MY ACCOUNT</button>
+          {isAuth? <button className='formbtn' onClick={handleLogout}>Logout</button>:<button className='formbtn' type='submit'>LOGIN TO MY ACCOUNT</button>}
+
           </form>
           <button onClick={() => setShow(!show)} className='formbtn'>I AM NEW HERE</button>
         </div>
@@ -105,8 +119,10 @@ export const Login = () => {
         {/* **************************** sign-up  ****************** */}
         {show ?
           <div className='sign'>
-            <h1>I am new here.</h1>
-            <h2>Enter your details below to start your Tax Return.</h2>
+
+            <h1  className='texth1'>I am new here.</h1>
+            <h2 className='texth2'>Enter your details below to start your Tax Return.</h2>
+
             <form className='loginform' onSubmit={handleSubmit}>
               <label className='lablefrom'>First name:
                 {" "}
