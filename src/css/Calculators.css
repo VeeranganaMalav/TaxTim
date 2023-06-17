@@ -1,0 +1,114 @@
+.calci{
+    width: 90%;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.calci>h1{
+    color: #444444;
+}
+
+.calci>h2{
+    font-weight: 500;
+    color: #444444;
+}
+
+.calc-tim{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.tim-img{
+    margin: 50px 0px;
+}
+
+.individual-calc{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.container{
+    margin: 20px 0px;
+}
+
+.calc-icon{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.container-ind{
+    position: relative;
+    width: 195px;
+    height: 195px;
+    background-color: #86C5CE;
+}
+
+.img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* .blurb{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 200px;
+    padding: 1em;
+    color: white;
+    font-size: 80%;
+} */
+
+.label{
+    position: absolute;
+    top: 161px;
+    left: 0px;
+    width: 100%;
+}
+
+
+/* ------------------------ MEDIA QUERIES ------------------------- */
+
+/* ------------------------- TABLET VIEW -------------------------- */
+@media only screen and (min-width: 376px) and (max-width: 820px) {
+    .calc-tim{
+        width: 95%;
+        justify-content: space-between;
+    }
+    
+    .tim-img{
+        width: 30%;
+        margin: 150px 0px;
+    }
+
+    .tim-img>img{
+        width: 100%;
+    }
+    
+    .individual-calc{
+        width: 60%;
+        justify-content: space-between;
+    }
+
+}
+
+
+/* ------------------------- MOBILE VIEW --------------------------- */
+@media only screen and (max-width: 375px) {
+    .calc-tim{
+        width: 100%;
+    }
+    
+    .tim-img{
+        display: none;
+    }
+    
+    .individual-calc{
+        width: 60%;
+        justify-content: space-between;
+    }
+}

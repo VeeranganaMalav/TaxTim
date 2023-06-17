@@ -9,15 +9,19 @@ import { FAQ } from "./Pages/FAQ";
 // import { FAQ } from './Pages/FAQ';
 // import { Login } from './Pages/Login';
 import { Footer } from "./Components/Footer";
+import Calculators from "./Pages/Calculators";
+import BillingPage from "./Components/BillingPage";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <AllRoutes />
-      <Footer />
+      {/* <Calculators /> */}
+      {/* <Navbar /> */}
+      {/* <AllRoutes /> */}
+      <BillingPage />
+      {/* <Footer /> */}
       {/* <IncomeTaxCalculator /> */}
-      <CapitalGains />
+      {/* <CapitalGains /> */}
     </div>
   );
 }
