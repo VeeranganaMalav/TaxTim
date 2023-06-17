@@ -30,7 +30,7 @@ export const FAQ = () => {
             <br />
             <br />
 
-            <h3>Who are the people behind TaxTim? Is it just a bot?</h3>
+            <h3>Who are the people behind TaxTim? Is it just a bot ?</h3>
             TaxTim is powered by a passionate team of Chartered Accountants and expert Tax Practitioners based in our Cape Town office. All of the TaxTim questions and help materials were written by us to help you understand the world of tax better. If at any stage you feel lost or uncertain, we are waiting to help you on our helpdesk, email or social media. Working late on your tax return? We're probably also up.
 
             <br />
