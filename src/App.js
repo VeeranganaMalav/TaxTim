@@ -6,17 +6,19 @@ import { Navbar } from "./Components/Navbar";
 import { Footer } from "./Components/Footer";
 import Calculators from "./Pages/Calculators";
 import BillingPage from "./Components/BillingPage";
+import { FinalChat } from "./chatbot/FinalChatBot";
 
 function App() {
   return (
     <div className="App">
       {/* <Calculators /> */}
-      {/* <Navbar /> */}
-      <BillingPage />
+      <Navbar />
+      {/* <BillingPage /> */}
       {/* <Footer /> */}
       {/* <IncomeTaxCalculator /> */}
       {/* <CapitalGains /> */}
       <AllRoutes />
+      <FinalChat/>
 
     </div>
   );
