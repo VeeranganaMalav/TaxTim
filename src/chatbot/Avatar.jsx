@@ -14,7 +14,7 @@ console.log(props.visible)
         ...styles.avatarHello,
         ...{opacity:hover?'1':'0'}
       }}
-      >Hey its Sanketh</div>
+      >Hey its Tim!</div>
 
       <div className='transition-3'
       onMouseEnter={()=>setHover(true)}

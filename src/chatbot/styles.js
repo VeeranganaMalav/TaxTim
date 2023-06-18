@@ -1,4 +1,4 @@
-export const styles = {
+ export const styles = {
     chatWithMeButton: {
         cursor: 'pointer',
         boxShadow: '0px 0px 16px 6px rgba(0, 0, 0, 0.33)',
@@ -34,14 +34,14 @@ export const styles = {
         bottom: '116px',
         right: '24px',
         // Size
-        width: '420px',
-        height: '530px',
+        width: '345px',
+        height: '475px',
         maxWidth: 'calc(100% - 48px)',
         maxHeight: 'calc(100% - 48px)',
         backgroundColor: 'white',
         // Border
-        borderRadius: '12px',
-        border: `2px solid #7a39e0`,
+        borderRadius: '15px',
+        border: `2px solid #2aa12e`,
         overflow: 'hidden',
         // Shadow
         boxShadow: '0px 0px 16px 6px rgba(0, 0, 0, 0.33)',
@@ -103,4 +103,4 @@ export const styles = {
         width: '100%',  
         backgroundColor: '#fff',
     }
-}
+} 
