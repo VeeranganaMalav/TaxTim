@@ -14,7 +14,7 @@ Answer Tim's simple questions. Get your tax done. Easy.</h1>
         <div>
             <img src="https://www.taxtim.com/za/images/tim-blinks2.gif" alt="" />
         </div>
-        <div style={{marginLeft:"100px"}}>
+        <div>
         <HowitworkChat/>
         </div>
         </div>

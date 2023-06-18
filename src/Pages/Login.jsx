@@ -5,7 +5,7 @@ import image1 from "../images/c2.png";
 import "../css/Login.css";
 import axios from "axios";
 import { useToast } from '@chakra-ui/react'
-
+import { Navigate } from 'react-router-dom';
 
 export const Login = () => {
   const [show, setShow] = useState(false);
@@ -23,14 +23,36 @@ export const Login = () => {
     const newObj = {
       name, email, password
     }
+    for(let i=0;i<data.length;i++){
+      if(data[i].email === email){
+        toast({
+          title: 'Error!',
+          description: "Gmail Already Exist",
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
+        return (setEmail(''),setName(''),setPassword(''))
+      }
+    }
 
+    if(name.length === 0 || email.length === 0 || password.length === 0){
+      toast({
+        title: 'Error!',
+        description: "Fill all inputs",
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      })
+      return
+    }
     axios.post(`https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/login`, newObj)
       .then(() => {
         toast({
           title: 'Register Successfully',
           description: "We've created your account for you.",
           status: 'success',
-          duration: 9000,
+          duration: 3000,
           isClosable: true,
         })
         setEmail("")
@@ -62,31 +84,57 @@ export const Login = () => {
     setIsAuth(false);
   }
 
-  useEffect(()=>{
-    handleLogout();
-  },[])
+  useEffect(() => {
+    // Check if authentication state is stored in localStorage
+    const storedAuth = localStorage.getItem('isAuth');
+
+    if (storedAuth) {
+      setIsAuth(JSON.parse(storedAuth));
+    }
+  }, []);
+
+  useEffect(() => {
+    // Update localStorage when authentication state changes
+    localStorage.setItem('isAuth', isAuth);
+  }, [isAuth]);
 
   const handleLogin = (e) => {
     e.preventDefault();
     for(let i=0;i<data.length;i++){
       if(data[i].email === email1 && data[i].password === password1){
-        // handleToastsuccess();
+        toast({
+          title: 'login Successfully',
+          description: "You are logged in",
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        })
         setEmail1('');
         setPassword1('')
           return setIsAuth(true)
       }
     }
+    toast({
+      title: 'Error!',
+      description: "Email and Password not match",
+      status: 'error',
+      duration: 3000,
+      isClosable: true,
+    })
       return setIsAuth(false)
   }
-  console.log(isAuth)
+  
 
+  if(isAuth){
+    return <Navigate to = "/" />
+  }
   return (
     <div className='loginContainer1'>
       <div className='loginContainer'>
         <div className='login'>
           <h1 className='texth1'>I am a returning user.</h1>
           <h2 className='texth2'>Please enter your login details from before.</h2>
-          {isAuth? <h1 className='text'>You are logged in</h1> : ""}
+          {isAuth? <h1 style={{color:"green", fontSize : "2.5rem" , fontWeight: "bold"}}>You are logged in</h1> : ""}
 
           <form className='loginform' onSubmit={handleLogin}>
             <label className='lablefrom'>Email address:
@@ -103,8 +151,8 @@ export const Login = () => {
               <input type="checkbox" />
               Remember me next time
             </label>
-            <div className='link'>
-              <Link>Forgot your password?</Link>
+            <div className='link1'>
+              <Link to={"/passwordReset"}>Forgot your password?</Link>
             </div>
           {isAuth? <button className='formbtn' onClick={handleLogout}>Logout</button>:<button className='formbtn' type='submit'>LOGIN TO MY ACCOUNT</button>}
 
@@ -138,7 +186,7 @@ export const Login = () => {
               <label className='lablefrom'>
                 Password:
               </label>
-              <input type="text" name='password' className='inputform' value={password} onChange={(e) => setPassword(e.target.value)} />
+              <input type="password" name='password' className='inputform' value={password} onChange={(e) => setPassword(e.target.value)} />
 
               <label className='lablefrom'>
                 <input type="checkbox" />
@@ -156,6 +204,7 @@ export const Login = () => {
               <p>TaxTim handles even the most complicated tax returns. Try us!</p>
             </div>
           </div> : ""}
+
 
       </div>
     </div>
