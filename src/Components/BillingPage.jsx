@@ -1,12 +1,35 @@
 import React, { useState } from 'react'
 import "../css/BillingPage.css";
 import captchaImg from "../images/captcha.png";
+import { Box, Button, Icon, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Step, StepDescription, StepIcon, StepIndicator, StepNumber, StepSeparator, StepStatus, StepTitle, Stepper, useDisclosure, useSteps} from '@chakra-ui/react';
+import {FaCheckCircle} from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+
+const steps = [
+    { title: 'First', description: 'Login' },
+    { title: 'Second', description: 'Calculate Tax' },
+    { title: 'Third', description: 'Payment' },
+]
 
 const BillingPage = () => {
 
     const [showDropdown1, setShowDropdown1] = useState(false);
     const [showDropdown2, setShowDropdown2] = useState(false);
 
+    const [fname, setFName] = useState("");
+    const [lname, setLName] = useState("");
+    const [pan, setPan] = useState("");
+    const [amount, setAmount] = useState("");
+    const [mobile, setMobile] = useState("");
+    const [assessmentYear, setAssessmentYear] = useState("");
+
+    const { activeStep, setActiveStep } = useSteps({
+        index: 2,
+        count: steps.length,
+    });
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const navigate = useNavigate();
 
     const handlePayment1 = () => {
         setShowDropdown1(true);
@@ -18,18 +41,67 @@ const BillingPage = () => {
         setShowDropdown1(false);
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setActiveStep(activeStep + 1);
+        onOpen();
+
+        setFName("");
+        setLName("");
+        setPan("");
+        setMobile("");
+        setAmount("");
+        setAssessmentYear("");
+
+        setTimeout(() => {
+            navigate("/")
+        }, 3000);
+
+    }
+
     return (
         <div className="billing-container">
-            <h1 className="billing-heading">Billing Page</h1>
-            <form id="billing-form">
-                <div className="form-address">
-                    <input type="text" placeholder="First Name" required className="input-address" />
-                    <input type="text" placeholder="Last Name" required className="input-address" />
-                    <input type="text" placeholder="Address" required className="input-address" />
+            <h1 className="billing-heading">e-Pay Tax</h1>
 
-                    <input id="city" type="text" placeholder="City" required className="input-address" />
-                    <input id="zip" type="text" placeholder="Zip Code" required className="input-address" />
-                    <input type="text" placeholder="Mobile Number" required className="input-address" />
+            <Stepper index={activeStep}>
+                {steps.map((step, index) => (
+                    <Step key={index}>
+                        <StepIndicator>
+                            <StepStatus
+                                complete={<StepIcon />}
+                                incomplete={<StepNumber />}
+                                active={<StepNumber />}
+                            />
+                        </StepIndicator>
+
+                        <Box flexShrink='0'>
+                            <StepTitle style={{ borderBottom: "none" }}>{step.title}</StepTitle>
+                            <StepDescription style={{ fontSize: "18px", fontWeight: "600", fontFamily: "'Montserrat', sans-serif" }}>{step.description}</StepDescription>
+                        </Box>
+
+                        <StepSeparator />
+                    </Step>
+                ))}
+            </Stepper>
+            
+            <form id="billing-form" onSubmit={handleSubmit}>
+                <div className="form-address">
+                    <input type="text" placeholder="First Name" required className="input-address" value={fname} onChange={e => setFName(e.target.value)}/>
+                    <input type="text" placeholder="Last Name" required className="input-address" value={lname} onChange={e => setLName(e.target.value)}/>
+                    <input type="text" placeholder="PAN" required className="input-address" value={pan} onChange={e => setPan(e.target.value)}/>
+                    <input id="tax-amount" type="text" placeholder="Tax Amount" required className="input-address" value={amount} onChange={e => setAmount(e.target.value)}/>
+                    <select name="assessment-year" id="assessment-year" className="input-address" value={assessmentYear} onChange={e => setAssessmentYear(e.target.value)}>
+                        <option value="">Assessment Year</option>
+                        <option value="2023-2024">2023-2024</option>
+                        <option value="2022-2023">2022-2023</option>
+                        <option value="2021-2022">2021-2022</option>
+                        <option value="2020-2021">2020-2021</option>
+                        <option value="2019-2020">2019-2020</option>
+                        <option value="2018-2019">2018-2019</option>
+                        <option value="2017-2018">2017-2018</option>
+                    </select>
+                    <input type="text" placeholder="Mobile Number" required className="input-address" value={mobile} onChange={e => setMobile(e.target.value)}/>
                 </div>
 
 
@@ -46,7 +118,7 @@ const BillingPage = () => {
 
 
 
-                <h3> Payment Method</h3>
+                <h3 className="payment-heading">Payment Method</h3>
                 <div>
                     <table id="payment_table">
                         <tr>
@@ -56,9 +128,9 @@ const BillingPage = () => {
                                     <img src="https://www.aeropostale.com/on/demandware.static/Sites-aeropostale-Site/-/default/dwe33d2fc5/images/cc_icon.svg" alt="credit-card" />
                                     <span className="payment-text">Credit Card</span>
                                 </div>
-                                <div id="dropdown1"  style={{ display: showDropdown1 ? "block": "none"}}>
+                                <div id="dropdown1" style={{ display: showDropdown1 ? "block" : "none" }}>
                                     <form id="credit-card-payment-form">
-                                        <input type="text" placeholder="Name on Card"  className="credit-input"/>
+                                        <input type="text" placeholder="Name on Card" className="credit-input" />
                                         <select className="credit-input">
                                             <option value="visa">Visa</option>
                                             <option value="americanexpress">American Express</option>
@@ -67,8 +139,8 @@ const BillingPage = () => {
                                             <option value="jcb">JCB</option>
                                         </select>
 
-                                        <input type="text" placeholder="Card Number"  className="credit-input"/>
-                                        <input type="text" placeholder="CVV"  className="credit-input"/>
+                                        <input type="text" placeholder="Card Number" className="credit-input" />
+                                        <input type="text" placeholder="CVV" className="credit-input" />
                                         <select className="credit-input">
                                             <option value=''>Month</option>
                                             <option value='1'>Janaury</option>
@@ -110,11 +182,11 @@ const BillingPage = () => {
                         <tr>
                             <td className="payment_td">
                                 <div className="credit">
-                                    <input type="radio" name="option" onClick={handlePayment2}/>
+                                    <input type="radio" name="option" onClick={handlePayment2} />
                                     <img src="https://www.aeropostale.com/on/demandware.static/Sites-aeropostale-Site/-/default/dw772bfea5/images/paypal_icon.png" alt="paypal" />
                                     <span className="payment-text">Pay Pal</span>
                                 </div>
-                                <div id="dropdown2" style={{ display: showDropdown2 ? "block": "none"}}>
+                                <div id="dropdown2" style={{ display: showDropdown2 ? "block" : "none" }}>
                                     <button id="button_img">
                                         <img src="https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_960_720.png" alt="paypal-img" />
                                     </button>
@@ -124,10 +196,18 @@ const BillingPage = () => {
                         </tr>
                     </table>
                 </div>
-                <button id="pay-tax-btn">
-                    <a href="./thankyou.html">Pay Tax</a>
-                </button>
+                <button id="pay-tax-btn" type="submit" disabled={(fname.length !== 0 && lname.length !== 0 && pan.length !== 0 && amount.length !== 0 && mobile.length !== 0) ? false : true}>Pay Tax</button>
             </form>
+            <Modal onClose={onClose} isOpen={isOpen} isCentered size={'lg'}>
+                <ModalOverlay />
+                <ModalContent>
+                    {/* <ModalCloseButton /> */}
+                    <ModalBody style={{display: "flex", flexDirection: "column", alignItems: "center", padding:"30px"}}>
+                        <Icon as={FaCheckCircle} style={{color: "green", fontSize: "70px"}}/>
+                        <p style={{paddingTop: "30px", fontSize: "30px"}}>Payment Successful</p>
+                    </ModalBody>
+                </ModalContent>
+            </Modal>
         </div>
     )
 }

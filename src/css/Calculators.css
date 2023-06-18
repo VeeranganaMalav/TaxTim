@@ -1,14 +1,19 @@
 .calci{
     width: 90%;
     margin: auto;
+    padding: 50px 0px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .calci>h1{
     color: #444444;
+    font-size: 34px;
+    font-weight: 700;
 }
 
 .calci>h2{
+    padding: 15px 0px;
+    font-size: 26px;
     font-weight: 500;
     color: #444444;
 }

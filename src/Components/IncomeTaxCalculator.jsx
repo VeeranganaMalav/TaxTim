@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import "../css/IncomeTaxCalculator.css"
+import { Link } from 'react-router-dom';
+import BillingPage from './BillingPage';
 
 let initialState = {
     age: "",
@@ -73,7 +75,7 @@ const IncomeTaxCalculator = () => {
     }
 
   return (
-    <div>
+    <div className="income-tax-calci">
         <h1 className="calculator-heading">Income Tax Calculator</h1>
         <form onSubmit={handleSubmit} id="incometax-form">
             <label htmlFor="age" className="calculator-label">
@@ -104,6 +106,9 @@ const IncomeTaxCalculator = () => {
             <input type="submit" value="Calculate" id="calculate-btn"/>
         </form>
         <div className="calculations">
+            <Link to="/epay-tax">
+                <button id="e-pay-tax">Pay Tax</button>
+            </Link>
             <h3>Calculated Income Tax: <span className="calculated-tax">{incomeTax}</span></h3>
             <h3>Calculated Health and Education Cess: <span className="calculated-tax">{healthEducationCess}</span></h3>
         </div>

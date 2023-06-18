@@ -17,6 +17,8 @@
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.12.1",
     "react-scripts": "^5.0.1",
+    "react-simple-chatbot": "^0.6.1",
+    "styled-components": "^6.0.0-rc.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -42,5 +44,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "Homepage": "."
 }
