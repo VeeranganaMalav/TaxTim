@@ -65,24 +65,24 @@ export const Footer = () => {
               </div>
             </div>
 
-            <div className=" social-container">
-              <a href="https://twitter.com/" target="_blank">
+            <div className="social-container">
+              <a href="" target="_blank">
               <a><BsTwitter/></a>
                 <i class="social fab fa-twitter"></i>
               </a>{" "}
               &nbsp;
-              <a href="https://www.facebook.com/" target="_blank">
+              <a href="" target="_blank">
               <a><ImFacebook2/></a>
                 <i class="social fab fa-facebook"></i>
               </a>{" "}
               &nbsp;
-              <a href="https://www.instagram.com/" target="_blank">
+              <a href="" target="_blank">
               <a><ImInstagram/></a>
                 
                 <i class="social fab fa-instagram"></i>
               </a>{" "}
               &nbsp;
-              <a href="https://www.linkedin.com/" target="_blank">
+              <a href="" target="_blank">
               <a><BsLinkedin/></a>
                 <i class="social fab fa-linkedin"></i>
               </a>
@@ -93,7 +93,7 @@ export const Footer = () => {
               <a href="privacy">Privacy Policy</a> |{" "}
               <a href="sitemap">Sitemap</a>
               <br />
-              Copyright © 2023 TaxTim | Human Robot Pty Ltd. All Rights
+              Copyright ©️ 2023 TaxTim | Human Robot Pty Ltd. All Rights
               Reserved.
               <br />
               Supported by SARS Registered Tax Practitioner PR-0009352 | 32

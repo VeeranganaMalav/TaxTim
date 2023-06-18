@@ -1,22 +1,22 @@
 import React, {createContext, useEffect, useState} from 'react'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 export const AuthContext = createContext();
 
 const AuthContextProvider = ({children}) => {
 
     let [isAuth, setIsAuth] = useState(false);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const login = (userFound) => {
-        setIsAuth(true);
-        navigate("/");
-    }
+    // const login = (userFound) => {
+    //     setIsAuth(true);
+    //     navigate("/");
+    // }
 
-    const logout = () => {
-      setIsAuth(false);
-      navigate('/');
-    };
+    // const logout = () => {
+    //   setIsAuth(false);
+    //   navigate('/');
+    // };
 
     // useEffect(() => {
     //   // Check if authentication state is stored in localStorage
@@ -34,7 +34,7 @@ const AuthContextProvider = ({children}) => {
 
 
   return (
-    <AuthContext.Provider value={{isAuth, setIsAuth, login, logout}}>
+    <AuthContext.Provider value={{isAuth, setIsAuth}}>
         {children}
     </AuthContext.Provider>
   )

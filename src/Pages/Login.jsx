@@ -128,9 +128,9 @@ export const Login = () => {
   }
   
 
-  if(isAuth){
-    return <Navigate to = "/" />
-  }
+  // if(isAuth){
+  //   return <Navigate to = "/" />
+  // }
   return (
     <div className='loginContainer1'>
       <div className='loginContainer'>

@@ -7,25 +7,25 @@
     font-family: "Montserrat", Arial, sans-serif;
 }
 
-h2 {
+.headingh2 {
     font-size: 2rem;
     color: #4d4d4d;
     font-weight: bold;
     font-family: "Montserrat", Arial, sans-serif;
 }
-b{
+.tagB{
     font-size: 2rem;
     color: #4d4d4d;
     font-weight: bold;
     font-family: "Montserrat", Arial, sans-serif;
 }
-p{
+.para1{
     font-size: 1.5rem;
     color: #4d4d4d;
     font-weight: normal;
     font-family: "Montserrat", Arial, sans-serif;
 }
-button{
+.formbtn1{
     background-color: #b7b4b4;
     color:#111111;
     font-size: x-large;
@@ -45,31 +45,24 @@ button{
 }
 
 @media (min-width: 550px){
-h1 {
+.heading {
     font-size: 5rem;
 }
 }
 
-h1 {
+.heading{
     font-size: 4rem;
     
     letter-spacing: -0.1rem;
 }
-/* h1, h2, h3, h4, h5, h6 {
-    color: black;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: 2rem;
-} */
-h1 {
+.heading {
     font-size: 2em;
     margin: 0.67em 0;
 }
 
 
 
-h1 {
+.heading {
     display: block;
     font-size: 2em;
     margin-block-start: 0.67em;
@@ -85,6 +78,6 @@ h1 {
     align-items: center;
 
 }
-b {
+.tagB {
     font-weight: bolder;
 }

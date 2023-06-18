@@ -8,6 +8,9 @@ import Calculators from "../Pages/Calculators";
 import {PasswordReset} from "../Pages/PasswordReset";
 import { Howitworks } from "../Pages/Howitworks";
 import { Contact } from "../Pages/Contact";
+import  PrivateRoute  from "../Components/PrivateRoute"
+import  BillingPage from "../Components/BillingPage"
+import { Login }  from "../Pages/Login"
 
 export const AllRoutes = () => {
   return (
