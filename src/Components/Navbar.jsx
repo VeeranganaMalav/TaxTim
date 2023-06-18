@@ -48,7 +48,7 @@ export const Navbar = () => {
         </div>
         <div className="top-nav-III">
           <div>
-            <a href="/" className="anch">How it works</a>
+            <a href="/howitworks" className="anch">How it works</a>
           </div>
           <div>
             <a href="/" className="anch">Pricing</a>

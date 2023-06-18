@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import image from "../images/c.png"
 import image1 from "../images/c2.png";
 import "../css/Login.css";
 import axios from "axios";
 import { useToast } from '@chakra-ui/react'
+import { AuthContext } from '../Context/AuthContextProvider';
 import { Navigate } from 'react-router-dom';
 
 export const Login = () => {
@@ -16,7 +17,9 @@ export const Login = () => {
   const [name, setName] = useState("");
   const toast = useToast();
   const [data, setData] = useState([]);
-  const [isAuth, setIsAuth] = useState(false);
+
+  const {isAuth, setIsAuth} = useContext(AuthContext);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
