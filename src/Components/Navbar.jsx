@@ -42,17 +42,19 @@ export const Navbar = () => {
       </div>
       <div className="top-nav-II">
         <div className="logo-img">
-          <img src="https://www.taxtim.com/za/images/taxtim-logo.svg" alt="" />
+          <Link to="/">
+            <img src="https://www.taxtim.com/za/images/taxtim-logo.svg" alt="" />
+          </Link>
         </div>
         <div className="top-nav-III">
           <div>
-            <a className="anch" href="/howitworks">How it works</a>
+            <a href="/" className="anch">How it works</a>
           </div>
           <div>
-            <a className="anch">Pricing</a>
+            <a href="/" className="anch">Pricing</a>
           </div>
           <div>
-            <a className="anch">Help</a>
+            <a href="/" className="anch">Help</a>
           </div>
           <div>
             <button className="getstart">GET STARTED</button>

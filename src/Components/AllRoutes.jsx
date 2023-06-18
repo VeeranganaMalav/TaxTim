@@ -11,13 +11,13 @@ export const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />}></Route>
-      {/* <Route path="/contact" element={}></Route> */}
-      <Route path="/howitworks" element={<Howitworks/>}></Route>
       <Route path="/faq" element={<FAQ/>}></Route>
-      <Route path="/calculators" element={<Calculators />}></Route>
-      <Route path="/login" element={<p>Login</p>}></Route>
+      <Route path="/calculators" element={<PrivateRoute><Calculators /></PrivateRoute>}></Route>
+      <Route path="/login" element={<Login />}></Route>
       <Route path="/calculators/income-tax" element={<IncomeTaxCalculator />}></Route>
       <Route path="/calculators/capital-gains-tax" element={<CapitalGains />}></Route>
+      <Route path="/epay-tax" element={<PrivateRoute><BillingPage /></PrivateRoute>}></Route>
+      <Route path="/passwordReset" element={<PasswordReset />}></Route>
     </Routes>
   );
 };

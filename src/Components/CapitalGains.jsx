@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "../css/CapitalGainsCalculator.css"
+import { Link } from 'react-router-dom';
 
 let initialState = {
     salePrice: 0,
@@ -53,7 +54,7 @@ const CapitalGains = () => {
     }
 
   return (
-    <div>
+    <div className="capitalgains-tax-calci">
         <h1 className="calculator-heading">Capital Gains Calculator</h1>
 
         {/* --------------------------- SHORT TERM CAPITAL GAINS ---------------------------- */}
@@ -79,6 +80,9 @@ const CapitalGains = () => {
                 <input type="submit" value="Calculate" className="calculate-btn"/>
             </form>
             <div className="calculations">
+                <Link to="/epay-tax">
+                    <button className="e-pay-tax">Pay Tax</button>
+                </Link>
                 <h4>Net short term capital gains: <span className="calculated-tax">{stcg}</span></h4>
                 <h4>STGC Tax applicable: <span className="calculated-tax">{stcgTax}</span></h4>
             </div>
@@ -108,6 +112,9 @@ const CapitalGains = () => {
                 <input type="submit" value="Calculate" className="calculate-btn"/>
             </form>
             <div className="calculations">
+                <Link to="/epay-tax">
+                    <button className="e-pay-tax">Pay Tax</button>
+                </Link>
                 <h4>Net long term capital gains: <span  className="calculated-tax">{ltcg}</span></h4>
                 <h4>LTGC Tax applicable: <span  className="calculated-tax">{ltcgTax}</span></h4>
             </div>

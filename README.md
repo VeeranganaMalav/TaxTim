@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# closed-birthday-4512
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Depoyed Link : 
+The project is deployed on netlify - https://verdant-churros-ca9d92.netlify.app
 
-## Available Scripts
 
+### Description
+
+TaxTim is an online tool that assists non tax practitioners with their tax return submission and in calculating tax. Their goal is to make it as easy as possible with little to no effort but without the hefty practitioners' cost.
+
+
+### Available Scripts
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Mock API - [https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/login](https://6453b750e9ac46cedf2d995b.mockapi.io/api/bikes/login)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tech Stacks
 
-### `npm run build`
+- HTML
+- CSS
+- ReactJS
+- Chakra UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Folder Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+    closed-birthday-4512
+    ├── README.md
+    ├── node_modules
+    ├── package-lock.json
+    ├── package.json
+    ├── .gitignore
+    ├── public
+    └── src
+        └── Components
+        │   ├── AllRoutes.jsx
+        │   ├── BillingPage.jsx
+        │   ├── CapitalGains.jsx
+        │   ├── Footer.jsx
+        │   ├── IncomeTaxCalculator.jsx
+        │   ├── Navbar.jsx
+        │   └── PrivateRoute.jsx
+        ├── chatbot
+        │   ├── Avatar.jsx
+        │   ├── chatbot.js
+        │   ├── Form.jsx
+        │   └── PrivateRoute.jsx
+        ├── Context
+        │   └── AuthContextProvider.jsx
+        └── css
+        │   ├── BillingPage.css
+        │   ├── Calculators.css
+        │   ├── CapitalGainsCalculator.css
+        │   ├── Contact.css
+        │   ├── FAQ.css
+        │   ├── Footer.css
+        │   ├── HomePage.css
+        │   ├── IncomeTaxCalculator.css
+        │   ├── Login.css
+        │   └── Navbar.jsx
+        ├── images
+        │   ├── c.png
+        │   ├── c2.jpg
+        │   ├── captcha.jpg
+        │   ├── HomePage (600).jpg
+        │   ├── taxtim-logo.jpg
+        │   └── TaxTim.png
+        ├── Pages
+        │   ├── Calculators.jsx
+        │   ├── Contact.jsx
+        │   ├── FAQ.jsx
+        │   ├── Login.jsx
+        │   ├── HomePage.jsx
+        │   └── Login.jsx
+        ├── App.css
+        ├── App.js
+        ├── index.css
+        └── index.js
+```
 
-### `npm run eject`
+### Landing Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Login Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Calculators Page
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Income Tax Calculator
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Billing Page

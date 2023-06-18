@@ -1,7 +1,15 @@
+.income-tax-calci{
+    background-color: #dcf1f6;
+    padding: 40px 0px;
+}
+
 .calculator-heading{
     font-family: 'Montserrat', sans-serif;
-    padding: 30px 0px;
+    padding: 0px 0px 30px 0px;
     text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #444444;
 }
 
 #incometax-form{
@@ -10,7 +18,9 @@
     width: 40%;
     margin: auto;
     padding: 30px 30px;
-    background-color: rgb(239, 239, 239);
+    border-radius: 20px;
+    /* background-color: rgb(239, 239, 239); */
+    background-color: rgba(244, 244, 244, 0.8);
 }
 
 .calculator-label > .calculator-fields{
@@ -32,9 +42,15 @@
     margin: 20px auto;
     padding: 10px;
     font-size: 20px;
-    background-color: #444444;
+    /* background-color: #444444; */
+    background-color: #2AA12E;
     border: none;
     color: white;
+}
+
+#calculate-btn:hover {
+    background-color: #0069d9;
+    cursor: pointer;
 }
 
 .calculations{
@@ -48,6 +64,7 @@
     font-weight: 500;
     text-align: left;
     font-size: 24px;
+    border-bottom: none;
 }
 
 .calculated-tax{
@@ -55,6 +72,21 @@
     font-size: 35px;
     margin-left: 20px;
 }
+
+#e-pay-tax{
+    color: white;
+    background-color: #2AA12E;
+    border-radius: 6px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#e-pay-tax:hover{
+    background-color: #0069d9;
+    cursor: pointer;
+}
+
 
 
 /* ------------------------ MEDIA QUERIES ------------------------- */

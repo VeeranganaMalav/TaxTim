@@ -66,23 +66,23 @@ export const Footer = () => {
             </div>
 
             <div className=" social-container">
-              <a href="" target="_blank">
+              <a href="https://twitter.com/" target="_blank">
               <a><BsTwitter/></a>
                 <i class="social fab fa-twitter"></i>
               </a>{" "}
               &nbsp;
-              <a href="" target="_blank">
+              <a href="https://www.facebook.com/" target="_blank">
               <a><ImFacebook2/></a>
                 <i class="social fab fa-facebook"></i>
               </a>{" "}
               &nbsp;
-              <a href="" target="_blank">
+              <a href="https://www.instagram.com/" target="_blank">
               <a><ImInstagram/></a>
                 
                 <i class="social fab fa-instagram"></i>
               </a>{" "}
               &nbsp;
-              <a href="" target="_blank">
+              <a href="https://www.linkedin.com/" target="_blank">
               <a><BsLinkedin/></a>
                 <i class="social fab fa-linkedin"></i>
               </a>
