@@ -19,7 +19,7 @@ Answer Tim's simple questions. Get your tax done. Easy.</h1>
         </div>
         </div>
         </div>
-     <div style={{width:"70%",margin:"auto",marginTop:"30px",fontSize:"20px"}}>
+     <div style={{width:"70%",margin:"auto",marginTop:"30px",fontSize:"20px",marginBottom:"60px"}}>
         <div style={{width:"55%",margin:"auto"}}>
         <h1>Enjoy a discount on TaxTim from our discount partners:</h1>
         </div>

@@ -156,9 +156,10 @@ form {
 }
 */
 
-.image-container {
+.img-container {
   position: relative;
   display: inline-block;
+  margin-top:-20px;
 }
 
 .text-overlay {
@@ -234,6 +235,7 @@ form {
   display: flex;
   justify-content: space-around;
   line-height: -1;
+  padding:40px 0px
 }
 
 .how-does {
@@ -259,10 +261,9 @@ form {
   border: none;
 }
 
-.img-container2 {
-  margin-top: 69px;
+.img-container2{
+  margin-top: 19px;
   margin-left: 80px;
-  border: 3px solid #000;
   border-radius: 20px 14px 21.5px 20px;
   height: 403px;
 }
