@@ -148,7 +148,7 @@ export const Login = () => {
             <label className='lablefrom'>
               Password:
             </label>
-            <input type="text" name='password1' value={password1} onChange={(e) => setPassword1(e.target.value)} className='inputform' />
+            <input type="password" name='password1' value={password1} onChange={(e) => setPassword1(e.target.value)} className='inputform' />
 
             <label className='lablefrom'>
               <input type="checkbox" />

@@ -29,7 +29,7 @@ export const Chatbot = (props) => {
     }} className='transition-5'>
    <ThemeProvider theme={theme}>
 
-    <ChatBot height="470px" contentStyle={{width:"340px",marginLeft:"1px"}} inputStyle={{width:"345px",height:"40px",marginLeft:"1px"}} submitButtonStyle={{marginRight:"5px", marginTop:"7px"}}headerTitle="Tim" botAvatar="https://www.taxtim.com/za/images/og-thumb3.jpg" steps={[
+    <ChatBot height="470px" contentStyle={{width:"340px",marginLeft:"1px"}} bubbleStyle={{fontSize:"17px"}}  inputStyle={{width:"345px",height:"40px",marginLeft:"1px"}} submitButtonStyle={{marginRight:"5px", marginTop:"7px"}}headerTitle="Tim" botAvatar="https://www.taxtim.com/za/images/og-thumb3.jpg" steps={[
           {
             id:'Greet',
             message:'Hello! My name is Tim. I am here to help you make tax easy.',
