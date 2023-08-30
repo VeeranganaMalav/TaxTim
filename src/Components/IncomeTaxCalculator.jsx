@@ -1,27 +1,82 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../css/IncomeTaxCalculator.css"
 import { Link } from 'react-router-dom';
 import BillingPage from './BillingPage';
+import  PieChart  from './PieChart';
+import { Chart } from 'chart.js';
+import { CategoryScale } from 'chart.js';
+import { Data } from './Data';
+import 'chart.js/auto'
+
 
 let initialState = {
     age: "",
-    salaryIncome: 0,
+    salaryIncome: 250000,
     houseProperty: 0,
     capitalGains: 0,
     deductions: 0
 }
-
+Chart.register(CategoryScale)
 const IncomeTaxCalculator = () => {
-
     const [formData, setFormData] = useState(initialState);
     const [incomeTax, setIncomeTax] = useState(0);
     const [healthEducationCess, setHealthEducationCess] = useState(0);
-
+    const {age,salaryIncome,houseProperty,capitalGains,deductions}=formData
+    
+    console.log(incomeTax)
     const handleChange = (e) => {
         const {name, value} = e.target;
 
         setFormData(prev => ({...prev, [name] : value}));
+      
+    
     }
+    const part=[]
+    function addData(){
+       part.push(salaryIncome,houseProperty,capitalGains,deductions,incomeTax)   
+    
+       console.log(part)
+    }
+    addData()
+    
+    useEffect(()=>{
+     setChartData({
+        labels: ["Income from Salary","Income from House Property","Capital Gains","Allowances and Deductions","Income Tax"], 
+        datasets: [
+          {
+            label: "Income Distribution for a year",
+            data: part.map(el=>el),
+            
+          }
+        ]
+      }
+     )
+    },[formData,incomeTax])
+  
+    
+
+
+
+    const [chartData, setChartData] = useState({
+        labels: ["Income from Salary","Income from House Property","Capital Gains","Allowances and Deductions","Income Tax"], 
+        datasets: [
+          {
+            label: "Users Gained ",
+            data: part.map(el=>el),
+            backgroundColor: [
+              "rgba(75,192,192,1)",
+              "purple",
+              "orange",
+              "#f80303",
+              "green"
+            ],
+            borderColor: "black",
+           
+          }
+        ]
+      });
+      console.log(chartData)
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -75,7 +130,8 @@ const IncomeTaxCalculator = () => {
     }
 
   return (
-    <div className="income-tax-calci">
+    <div style={{display:"flex"}}>
+    <div className="income-tax-calci" style={{border:"2px solid red", width:"60%"}}>
         <h1 className="calculator-heading">Income Tax Calculator</h1>
         <form onSubmit={handleSubmit} id="incometax-form">
             <label htmlFor="age" className="calculator-label">
@@ -112,6 +168,10 @@ const IncomeTaxCalculator = () => {
             <h3>Calculated Income Tax: <span className="calculated-tax">{incomeTax}</span></h3>
             <h3>Calculated Health and Education Cess: <span className="calculated-tax">{healthEducationCess}</span></h3>
         </div>
+    </div>
+    <div>
+       <PieChart chartData={chartData}  />
+    </div>
     </div>
   )
 }

@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Navbar />
       <AllRoutes />
-      <FinalChat />
       <Footer />
+      <FinalChat />
     </div>
   );
 }
