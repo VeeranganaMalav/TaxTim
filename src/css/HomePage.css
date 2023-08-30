@@ -159,7 +159,7 @@ form {
 .img-container {
   position: relative;
   display: inline-block;
-  margin-top:-20px;
+  margin-top: -20px;
 }
 
 .text-overlay {
@@ -175,7 +175,7 @@ form {
 
 .form-container {
   position: absolute;
-  top: 200px;
+  top: 100px;
   right: 100px;
   text-align: left;
   gap: 10px;
@@ -235,7 +235,7 @@ form {
   display: flex;
   justify-content: space-around;
   line-height: -1;
-  padding:40px 0px
+  padding: 40px 0px;
 }
 
 .how-does {
@@ -261,7 +261,7 @@ form {
   border: none;
 }
 
-.img-container2{
+.img-container2 {
   margin-top: 19px;
   margin-left: 80px;
   border-radius: 20px 14px 21.5px 20px;
@@ -338,7 +338,7 @@ form {
     right: auto;
     width: 100%;
   }
-  
+
   .form-container button {
     width: 100%;
     margin-left: 0;
@@ -353,7 +353,7 @@ form {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 800px) {
   .text-overlay {
     top: 15%;
     left: 15%;
@@ -378,5 +378,11 @@ form {
   .find {
     width: 100%;
     margin: 10px 0;
+  }
+  .how-does {
+    margin-left: 20px;
+  }
+  .img-container2 {
+    margin-left: 10px;
   }
 }
