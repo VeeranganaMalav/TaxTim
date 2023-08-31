@@ -1,20 +1,21 @@
 import React from 'react'
 import { HowitworkChat } from '../Components/HowitworkChat'
+import "../css/HowitWorks.css"
 
 export const Howitworks = () => {
   return (
     <>
-    <div style={{width:"80%",margin:"auto",marginTop:"30px"}}>
-        <div style={{width:"65%",fontSize:"25px",fontWeight:"bold"}}>
+    <div id="main-container">
+        <div id="heading"> 
 
         <h1>How Tim helps you complete your tax return right<br/>
 Answer Tim's simple questions. Get your tax done. Easy.</h1>
         </div>
-        <div style={{display:"flex",marginTop:"30px"}}>
-        <div>
-            <img src="https://www.taxtim.com/za/images/tim-blinks2.gif" alt="" />
-        </div>
-        <div>
+        <div id="img-chatBot">
+        {/* <div id="img-container"> */}
+            <img src="https://www.taxtim.com/za/images/tim-blinks2.gif" alt="" id="img" />
+        {/* </div> */}
+        <div id="chatbot">
         <HowitworkChat/>
         </div>
         </div>
