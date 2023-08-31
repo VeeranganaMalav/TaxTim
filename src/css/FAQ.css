@@ -1,53 +1,56 @@
-
-.general{
-    color: #4d4d4d;
-    font-weight: bold;
-    font-family: "Montserrat", Arial, sans-serif;
-    margin-top: 0;
-    margin-bottom: 2rem;
-    
+.general {
+  color: #4d4d4d;
+  font-weight: bold;
+  font-family: "Montserrat", Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 .general h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    letter-spacing: -0.1rem;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    background-color: #dcf1f6;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  background-color: #dcf1f6;
 }
 
-.section {
-    text-align: left;
-    padding: 40px 0 20px 30px;
-    background-color: #dcf1f6;
+.section1 {
+  text-align: left;
+  padding: 40px 0 20px 30px;
+  background-color: #dcf1f6;
 }
 
-@media screen and (max-width: 768px){
-.section {
+@media screen and (max-width: 768px) {
+  .section {
     padding-left: 10px;
-}
-.general h1{
+  }
+  .general h1 {
     font-size: 1.5rem;
-}
-.general h2{
+  }
+  .general h2 {
     font-size: 1.3rem;
-}
-.general h3{
+  }
+  .general h3 {
     font-size: 1rem;
+  }
 }
-}
-article, aside, footer, header, nav, section {
-    display: block;
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
 }
 * {
-    position: relative;
+  position: relative;
 }
 
 .general h2 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-@media screen and (max-width: 550px){
-.general h2 {
+@media screen and (max-width: 550px) {
+  .general h2 {
     font-size: 1.5rem;
     line-height: 1.25;
     letter-spacing: -0.1rem;
@@ -56,61 +59,61 @@ article, aside, footer, header, nav, section {
     margin-block-end: 0.83em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-}
+  }
 
-.general h3 {
+  .general h3 {
     font-size: 2rem;
+  }
 }
-}
-@media (min-width: 550px){
-.general h3 {
+@media (min-width: 550px) {
+  .general h3 {
     font-size: 2.6rem;
-}
+  }
 }
 .general h3 {
-    line-height: 1.3;
-    letter-spacing: -0.1rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
 }
 
 .general h3 {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
-.grid{
-    border-collapse:collapse;
-    border:1px solid grey;
-    }
+.grid {
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
 
-.grid td{
-    border:1px solid grey;
-    padding:0.2em 0.8em;
-    }
-    table{
-        margin-bottom: 2.5rem;
-        display: table;
-        border-collapse: separate;
-        box-sizing: border-box;
-        text-indent: initial;
-        border-spacing: 2px;
-        border-color: gray;
-    }
-    tbody {
-        display: table-row-group;
-        vertical-align: middle;
-        border-color: inherit;
-    }
-    tr {
-        display: table-row;
-        vertical-align: inherit;
-        border-color: inherit;
-    }
-    td {
-        vertical-align: top;
-        display: table-cell;
-    }
-    b {
-        font-weight: bolder;
-    }
+.grid td {
+  border: 1px solid grey;
+  padding: 0.2em 0.8em;
+}
+table {
+  margin-bottom: 2.5rem;
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: gray;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+td {
+  vertical-align: top;
+  display: table-cell;
+}
+b {
+  font-weight: bolder;
+}
