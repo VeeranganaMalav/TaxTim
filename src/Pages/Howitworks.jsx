@@ -1,6 +1,7 @@
 import React from 'react'
 import { HowitworkChat } from '../Components/HowitworkChat'
 import "../css/HowitWorks.css"
+import { wrap } from 'framer-motion'
 
 export const Howitworks = () => {
   return (
@@ -24,7 +25,7 @@ Answer Tim's simple questions. Get your tax done. Easy.</h1>
         <div style={{width:"55%",margin:"auto"}}>
         <h1>Enjoy a discount on TaxTim from our discount partners:</h1>
         </div>
-        <div style={{display:"flex",gap:"50px",marginTop:"30px"}}>
+        <div id="banner">
          <div style={{width:"150px",height:"50px"}}>
          <img  src="https://www.taxtim.com/za/images/partner-old-mutual.png" alt="" />
          </div>

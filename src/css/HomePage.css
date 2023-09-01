@@ -229,7 +229,12 @@ form {
 
 .h3tag {
   font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  font-weight: bolder;
 }
+/* #fastest{
+
+} */
 
 .section2 {
   display: flex;
@@ -242,11 +247,16 @@ form {
   margin-bottom: 30px;
   margin-top: 30px;
 }
+.how-does h5{
+  margin-top: 10px;
+}
 
 .find-button {
   display: flex;
   gap: 50px;
   justify-content: space-between;
+  margin-top: 20px;
+  margin-left: -10px;
 }
 
 .find {
@@ -304,7 +314,12 @@ form {
 .section3up > p {
   text-align: center;
 }
-
+.section3down{
+  margin-top: 20px;
+}
+.section3down div{
+  margin-top: 10px;
+}
 .icon-heading2::before {
   content: url("../images/correct.png");
   vertical-align: middle;
@@ -329,6 +344,7 @@ form {
   margin-bottom: 25px;
 }
 
+
 /* Media Queries for responsiveness */
 
 @media screen and (max-width: 768px) {
@@ -351,15 +367,43 @@ form {
   .row {
     flex-wrap: wrap;
   }
+  .text-overlay {
+
+      font-size: 20px;
+      margin-left: 100px;
+      width:400px
+     }
+
+  .form-container {
+    padding: 10px;
+    height: auto;
+  }
+
+  .img-container2 {
+    height: 300px;
+  }
+
+  .find-button {
+    flex-direction: column;
+  }
+
+  .find {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .how-does {
+    margin-left: 20px;
+  }
+  .img-container2 {
+    margin-left: 10px;
+  }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 375px) {
   .text-overlay {
-    top: 15%;
-    left: 15%;
-    right: 15%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
+    font-size: 12px;
+    margin-left: 100px;
+    width:200px
   }
 
   .form-container {

@@ -98,6 +98,7 @@
   
   .logo-img {
     margin-right: 0; /* Remove the right margin */
+    width:180px
   }
   
   .top-nav-III {
@@ -112,7 +113,7 @@
   }
   
   .link-div {
-    justify-content: center; /* Center align the links */
+    justify-content: space-evenly; /* Center align the links */
     width: 100%; /* Occupy full width */
     margin-top: 15px; /* Add some margin at the top */
   }
@@ -138,6 +139,7 @@
   
   .logo-img {
     margin-bottom: 10px; /* Reduce the margin at the bottom */
+    width:100px
   }
   
   .getstart {

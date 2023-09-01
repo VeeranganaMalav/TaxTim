@@ -22,7 +22,7 @@ export const HowitworkChat = () => {
     <div style={{width:"27%",margin:"auto"}}>
     <ThemeProvider theme={theme}>
 
-     <ChatBot height="270px" style={{width:"595px",boxShadow:"none"}} bubbleStyle={{width:"650px",fontSize:"27px"}} hideHeader="true" hideUserAvatar="true" hideBotAvatar="true" hideSubmitButton="true" bubbleOptionStyle={{fontSize:"20px",backgroundColor:"rgb(128,0,0)"}} contentStyle={{width:"1200px",height:"270px", backgroundColor:"white", marginLeft:"1px"}} headerTitle="Tim" botAvatar="https://www.taxtim.com/za/images/og-thumb3.jpg" steps={[
+     <ChatBot height="270px" style={{width:"43.5vw",boxShadow:"none" }} bubbleStyle={{width:"650px",fontSize:"27px"}} hideHeader="true" hideUserAvatar="true" hideBotAvatar="true" hideSubmitButton="true" bubbleOptionStyle={{fontSize:"20px",backgroundColor:"rgb(128,0,0)"}} contentStyle={{width:"200%",height:"270px", backgroundColor:"white", marginLeft:"1px"}} headerTitle="Tim" botAvatar="https://www.taxtim.com/za/images/og-thumb3.jpg" steps={[
          {
              id:'Greet',
              message:'Hello! My name is Tim. I am here to help you make tax easy.Click the button below to see how I can help :)',
