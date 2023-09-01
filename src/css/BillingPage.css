@@ -1,214 +1,219 @@
-.billing-container{
-    width: 100%;
-    /* margin: auto; */
-    padding: 0px 70px 60px 70px;
-    background-color: #dcf1f6;
+.billing-container {
+  width: 100%;
+  /* margin: auto; */
+  padding: 0px 70px 60px 70px;
+  background-color: #dcf1f6;
 }
 
-.billing-heading{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 34px;
-    font-weight: 700;
-    padding: 30px 0px;
-    color: #444444;
+.billing-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  padding: 30px 0px;
+  color: #444444;
 }
 
-#billing-form{
-    padding: 30px 30px;
+#billing-form {
+  padding: 30px 30px;
 }
 
-.form-address{
-    display: grid;
-    width: 60%;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    /* border: 1px solid orange; */
-    background-color: whitesmoke;
-    padding: 15px 15px;
-    margin-top: 30px;
-    border-radius: 20px;
+.form-address {
+  display: grid;
+  width: 60%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  /* border: 1px solid orange; */
+  background-color: whitesmoke;
+  padding: 15px 15px;
+  margin-top: 30px;
+  border-radius: 20px;
 }
 
-.input-address{
-    border: 1px solid grey;
-    font-size: 18px;
+.input-address {
+  border: 1px solid grey;
+  font-size: 18px;
 }
 
-#robot{
-    display: flex;
-    width: 20%;
-    align-items: center;
-    justify-content: space-between;
-    margin: 30px 0px;
-    padding: 10px 10px;
-    background-color: rgb(228, 226, 226);
-    border: 1px solid black;
+#robot {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0px;
+  padding: 10px 10px;
+  background-color: rgb(228, 226, 226);
+  border: 1px solid black;
 }
 
-#captcha{
-    width: 100%;
+#captcha {
+  width: 100%;
 }
 
-#captcha>label{
-    font-size: 18px;
+#captcha > label {
+  font-size: 18px;
 }
 
-#captcha-img{
-    width: 40%;
+#captcha-img {
+  width: 40%;
 }
 
-#captcha-img>img{
-    width: 50%;
+#captcha-img > img {
+  width: 50%;
 }
 
-#payment_table{
-    width: 50%;
-    background-color: whitesmoke;
+#payment_table {
+  width: 50%;
+  background-color: whitesmoke;
 }
 
-.payment_td{
-    border: 1px solid black;
-    padding: 20px 20px;
+.payment_td {
+  border: 1px solid black;
+  padding: 20px 20px;
 }
 
-.credit{
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    align-items: center;
+.credit {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.credit>img{
-    width: 40%;
+.credit > img {
+  width: 40%;
 }
 
-#credit-card-payment-form{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-    gap: 10px;
-    padding: 20px 0px 15px 0px;
-    /* border: 1px solid green; */
+#credit-card-payment-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 10px;
+  padding: 20px 0px 15px 0px;
+  /* border: 1px solid green; */
 }
 
-.payment-text{
-    font-size: 18px;
-    font-weight: 700;
+.payment-text {
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.credit-input{
-    border: 1px solid grey;
+.credit-input {
+  border: 1px solid grey;
 }
 
-#dropdown2{
-    text-align: center;
+#dropdown2 {
+  text-align: center;
 }
 
-#button_img{
-    background-color: rgb(224, 224, 22);
-    width: 30%;
-    padding: 10px 40px;
-    margin: 30px 0px;
-    border-radius: 50px;
+#button_img {
+  background-color: rgb(224, 224, 22);
+  width: 30%;
+  padding: 10px 40px;
+  margin: 30px 0px;
+  border-radius: 50px;
 }
 
-#dropdown2>p{
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
+#dropdown2 > p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
 }
 
-.payment-heading{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    margin: 30px 0px;
-    color: #444444;
-    border-bottom: none;
+.payment-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 30px 0px;
+  color: #444444;
+  border-bottom: none;
 }
 
-#pay-tax-btn{
-    width: 20%;
-    background-color: green;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 0px;
+#pay-tax-btn {
+  width: 20%;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0px;
 }
 
 /* ------------------------ MEDIA QUERIES ------------------------- */
 
 /* ------------------------- TABLET VIEW -------------------------- */
 @media only screen and (min-width: 376px) and (max-width: 820px) {
-    .form-address{
-        width: 80%;
-    }
+  .form-address {
+    width: 80%;
+  }
 
-    #robot{
-        width: 40%;
-    }
-    
-    .credit{
-        width: 70%;
-    }
+  #robot {
+    width: 40%;
+  }
+
+  .credit {
+    width: 70%;
+  }
+  .form-address {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
 }
 
 /* ------------------------- MOBILE VIEW --------------------------- */
 @media only screen and (max-width: 375px) {
-    .billing-container{
-        /* width: 90%; */
-    }
-    
-    .billing-heading{
-        font-size: 28px;
-    }
-    
-    #billing-form{
-        padding: 10px 30px;
-    }
-    
-    .form-address{
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-    }
-    
-    #robot{
-        width: 100%;
-    }
-    
-    #payment_table{
-        width: 90%;
-    }
-    
-    .credit{
-        display: flex;
-        width: 100%;
-    }
-    
-    .credit>img{
-        width: 20%;
-    }
-    
-    #credit-card-payment-form{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    #button_img{
-        width: 60%;
-    }
-    
-    #dropdown2>p{
-        font-size: 14px;
-    }
+  .billing-container {
+    /* width: 90%; */
+  }
 
-    #pay-tax-btn{
-        width: 50%;
-    }
+  .billing-heading {
+    font-size: 28px;
+  }
 
-    .payment-text{
-        font-size: 16px;
-    }
+  #billing-form {
+    padding: 10px 30px;
+  }
+
+  .form-address {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  #robot {
+    width: 100%;
+  }
+
+  #payment_table {
+    width: 90%;
+  }
+
+  .credit {
+    display: flex;
+    width: 100%;
+  }
+
+  .credit > img {
+    width: 20%;
+  }
+
+  #credit-card-payment-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #button_img {
+    width: 60%;
+  }
+
+  #dropdown2 > p {
+    font-size: 14px;
+  }
+
+  #pay-tax-btn {
+    width: 50%;
+  }
+
+  .payment-text {
+    font-size: 16px;
+  }
 }
