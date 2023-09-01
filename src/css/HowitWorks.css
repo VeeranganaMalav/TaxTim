@@ -2,19 +2,32 @@
    width:80%;
    margin:auto;
    margin-top:30px;
-   border:2px solid black
+
+
+  
+  
 }
 #heading{
     width:65%;
     font-size:25px;
     font-weight:bold;
-    border:2px solid red
+  
 }
 
 #img-chatBot{
     display:flex;
     margin-top:30px;
-    border:2px solid green;
+  
+}
+#chatbot{
+    width:30%;
+    z-index:-1
+}
+#banner{
+  display:flex;
+  gap:50px;
+  margin-Top:30px;
+  flex-wrap:wrap
 }
 
 @media only screen and (min-width: 576px) and (max-width: 1240px) {
@@ -22,27 +35,28 @@
         width:65%;
         margin:auto;
         margin-top:30px;
-        border:2px solid black
+   
      }
      #heading{
          width:70%;
          font-size:18px;
          font-weight:bold;
-         border:2px solid red
+        
      }
+   
      
      #img-chatBot{
          display:flex;
          margin-top:30px;
-         border:2px solid green;
+     
      }
     
      #img{
-        border:2px solid blue;
+       
         width:200px;
      }
      #chatbot{
-        border:2px solid black;
+    
         margin-left:-100px;
         width:300px
      }
