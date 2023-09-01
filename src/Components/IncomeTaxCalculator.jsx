@@ -5,7 +5,7 @@ import BillingPage from './BillingPage';
 import  PieChart  from './PieChart';
 import { Chart } from 'chart.js';
 import { CategoryScale } from 'chart.js';
-import { Data } from './Data';
+
 import 'chart.js/auto'
 
 
@@ -131,12 +131,12 @@ const IncomeTaxCalculator = () => {
 
   return (
     <div style={{display:"flex"}}>
-    <div className="income-tax-calci" style={{border:"2px solid red", width:"60%"}}>
+    <div className="income-tax-calci" style={{width:"70%"}}>
         <h1 className="calculator-heading">Income Tax Calculator</h1>
         <form onSubmit={handleSubmit} id="incometax-form">
             <label htmlFor="age" className="calculator-label">
                 Age
-                <select name="age" id="gender" value={formData.age} onChange={handleChange} className="calculator-fields">
+                <select name="age" id="gender" value={formData.age} onChange={handleChange} className="calculator-fields" required>
                     <option value="">Select</option>
                     <option value="lt60">Below 60 Years</option>
                     <option value="gte60">Above 60 Years</option>
@@ -165,12 +165,14 @@ const IncomeTaxCalculator = () => {
             <Link to="/epay-tax">
                 <button id="e-pay-tax">Pay Tax</button>
             </Link>
-            <h3>Calculated Income Tax: <span className="calculated-tax">{incomeTax}</span></h3>
-            <h3>Calculated Health and Education Cess: <span className="calculated-tax">{healthEducationCess}</span></h3>
+            <h3>Calculated Income Tax: <span className="calculated-tax">{(Math.round(incomeTax * 100) / 100).toFixed(2)}</span></h3>
+            <h3>Calculated Health and Education Cess: <span className="calculated-tax">{(Math.round(healthEducationCess * 100) / 100).toFixed(2)}</span></h3>
         </div>
     </div>
-    <div>
+    <div style={{backgroundColor:"#dcf1f6",width:"30%"}}>
+        <div style={{width:"400px",marginLeft:"-200px",height:"400px",marginTop:"100px"}}>
        <PieChart chartData={chartData}  />
+        </div>
     </div>
     </div>
   )

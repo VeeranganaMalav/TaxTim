@@ -15,7 +15,7 @@
 #incometax-form{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
     margin: auto;
     padding: 30px 30px;
     border-radius: 20px;
@@ -56,7 +56,7 @@
 .calculations{
     margin: auto;
     margin-top: 60px;
-    width: 40%;
+    width: 55%;
 }
 
 .calculations > h3{
@@ -80,6 +80,7 @@
     padding: 10px 30px;
     font-size: 18px;
     font-weight: 500;
+    margin-left: 200px;
 }
 
 #e-pay-tax:hover{
